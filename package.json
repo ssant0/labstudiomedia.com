@@ -13,8 +13,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/partytown": "^2.1.4",
-    "astro": "^5.14.1",
+    "@astrojs/partytown": "2.1.6",
+    "astro": "^6.1.4",
     "sharp": "^0.34.5"
   }
 }
