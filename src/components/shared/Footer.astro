@@ -162,7 +162,6 @@ const { useMap } = Astro.props;
         <div class="col-12 col-md-4 col-lg-4 d-flex flex-column justify-content-start align-items-start footer-links-container">
           <p class="text-brand m-0 ">Enlaces</p>
           <a href="/" target="_self" class="text-decoration-none">LabStudio Media</a>
-          <a href="/fotografia-y-video" target="_self" class="text-decoration-none">Fotografía</a>
           <a href="/desarrollo-web" target="_self" class="text-decoration-none">Desarrollo Web</a>
           <a href="/blog" target="_self" class="text-decoration-none">Blog</a>
         </div>
@@ -179,9 +178,9 @@ const { useMap } = Astro.props;
   const actualYear: number = new Date().getFullYear();
 
   const footerYear = document.querySelector("#footer-year");
-  footerYear.innerHTML = `2020 - ${actualYear} LABSTUDIO &#169;`;
+  footerYear!.innerHTML = `2020 - ${actualYear} LABSTUDIO &#169;`;
 
-  const useMap: boolean = document.querySelector("#data-use-map").textContent === "true" ? true : false;
+  const useMap: boolean = document.querySelector("#data-use-map")!.textContent === "true" ? true : false;
 
   let map;
 
