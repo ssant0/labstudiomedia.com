@@ -1,0 +1,1165 @@
+---
+import SubPageLayout from "../layouts/SubPageLayout.astro";
+import Footer from "../components/shared/Footer.astro";
+import Nav from "../components/shared/Nav.astro";
+import WhatsApp from "../components/shared/WhatsApp.astro";
+import CustomBtn from "../components/shared/CustomBtn.astro";
+---
+
+<SubPageLayout
+  title="LABSTUDIO | Tarjetas NFC Personalizadas para Empresas | Los Mochis"
+  ogTitle="LABSTUDIO | Tarjetas NFC Personalizadas para Empresas y Freelancers"
+  description="Tarjetas de presentación NFC de PVC rígido personalizadas para empresas y freelancers. Transfiere tu contacto completo con un solo toque. Diseño a tu imagen corporativa."
+  ogDescription="Moderniza la presentación de tu equipo con tarjetas NFC. Diseño corporativo, control centralizado y tecnología de vanguardia. LabStudio Media, Los Mochis."
+  keywords="tarjetas NFC, tarjetas de presentación NFC, tarjetas inteligentes empresariales, NFC México, tarjetas contactless, vCard NFC, tarjetas digitales, presentación empresarial, NFC Los Mochis, Sinaloa, tarjetas PVC NFC, tarjetas corporativas, networking digital"
+>
+  <Nav />
+
+  <!-- ===== HERO ===== -->
+  <section
+    class="hero-nfc d-flex justify-content-center align-items-center position-relative"
+  >
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center justify-content-center gy-6">
+
+        <!-- Text -->
+        <div class="col-12 col-lg-6 text-center text-lg-start" data-aos="fade-up">
+          <span class="nfc-eyebrow purple-eyebrow-text fw-semibold text-uppercase">
+            Tecnología NFC · Presentación Profesional
+          </span>
+          <h1 class="hero-nfc-title fw-bold mt-3 mb-4">
+            Conexiones Corporativas de
+            <span class="text-labs-gradient">Alto Impacto</span>
+          </h1>
+          <p class="hero-nfc-sub text-body-secondary mb-5">
+            Estandariza la presentación de tu equipo, proyecta innovación y
+            facilita el cierre de negocios con Tarjetas de Presentación NFC de
+            alta durabilidad.
+          </p>
+          <div
+            class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start"
+          >
+            <CustomBtn
+              isPrimary={true}
+              extraClasses="hero-btn-font-fix px-4 py-3"
+              href="https://wa.me/526681057964?text=Hola%20LabStudio%2C%20me%20interesan%20las%20Tarjetas%20NFC!"
+              blank={true}
+            >
+              Quiero mis Tarjetas NFC
+            </CustomBtn>
+            <CustomBtn
+              isPrimary={false}
+              extraClasses="hero-btn-font-fix px-4 py-3"
+              href="#aplicaciones"
+            >
+              Ver Aplicaciones
+            </CustomBtn>
+          </div>
+
+          <!-- Quick stats -->
+          <div
+            class="hero-stats d-flex gap-4 mt-6 justify-content-center justify-content-lg-start flex-wrap"
+          >
+            <div class="stat-item">
+              <span class="stat-number fw-bold">1</span>
+              <span class="stat-label text-body-secondary">Solo un toque</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number fw-bold">∞</span>
+              <span class="stat-label text-body-secondary">Actualizaciones</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number fw-bold">0</span>
+              <span class="stat-label text-body-secondary">Papel desperdiciado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card visual -->
+        <div
+          class="col-12 col-lg-5 d-flex justify-content-center"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <div class="nfc-card-showcase">
+            <div class="card-stack">
+              <div class="biz-card biz-card--back"></div>
+              <div class="biz-card biz-card--mid"></div>
+              <div class="biz-card biz-card--front">
+                <!-- Logo area -->
+                <div class="card-logo">
+                  <div class="card-logo-dot"></div>
+                  <span class="card-logo-text">EMPRESA</span>
+                </div>
+
+                <!-- NFC symbol -->
+                <div class="nfc-symbol-container">
+                  <svg
+                    class="nfc-icon"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22 32 Q22 18 32 18 Q42 18 42 32"
+                      stroke="rgba(255,255,255,0.95)"
+                      stroke-width="2.8"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <path
+                      d="M15 32 Q15 10 32 10 Q49 10 49 32"
+                      stroke="rgba(255,255,255,0.55)"
+                      stroke-width="2.8"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <path
+                      d="M8 32 Q8 2 32 2 Q56 2 56 32"
+                      stroke="rgba(255,255,255,0.25)"
+                      stroke-width="2.8"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <circle cx="32" cy="39" r="3.5" fill="rgba(255,255,255,0.95)"
+                    ></circle>
+                  </svg>
+                </div>
+
+                <!-- Name info -->
+                <div class="card-info">
+                  <div class="card-name">Carlos Mendoza</div>
+                  <div class="card-title-text">Director Comercial</div>
+                </div>
+
+                <!-- Tap ripple -->
+                <div class="tap-ripple"></div>
+                <div class="tap-ripple tap-ripple--2"></div>
+              </div>
+            </div>
+
+            <!-- Phone mockup -->
+            <div class="phone-mockup" data-aos="fade-up" data-aos-delay="500">
+              <div class="phone-screen">
+                <div class="contact-received">
+                  <div class="contact-avatar"></div>
+                  <div class="contact-details">
+                    <div class="contact-name-mock">Carlos Mendoza</div>
+                    <div class="contact-added-text">Contacto agregado ✓</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background orbs -->
+    <div class="position-absolute hsg-1" data-aos="fade-in" data-aos-duration="600">
+      <div class="radial-purple-nfc" style="width: 28rem; height: 28rem;"></div>
+    </div>
+    <div class="position-absolute hsg-2" data-aos="fade-in" data-aos-duration="600">
+      <div class="radial-purple-nfc" style="width: 24rem; height: 24rem;"></div>
+    </div>
+  </section>
+  <!-- /Hero -->
+
+  <!-- ===== EL NUEVO ESTÁNDAR ===== -->
+  <section class="nuevo-estandar py-12">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center" data-aos="fade-up">
+          <h6 class="text-uppercase purple-eyebrow-text fw-bold mb-3">
+            El Nuevo Estándar
+          </h6>
+          <h2 class="display-5 fw-bold mb-4">En presentación de negocios</h2>
+          <p class="text-body-secondary fs-5 mb-0">
+            En el mundo corporativo, la primera impresión define el éxito.
+            Transiciona a credenciales de
+            <strong>PVC rígido con tecnología NFC integrada</strong>: una
+            inversión inteligente que reduce costos recurrentes de imprenta,
+            protege el medio ambiente y garantiza que la información de tu
+            empresa llegue directamente a la agenda de tus prospectos.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 key benefits -->
+      <div class="row g-4 mt-6 justify-content-center">
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="benefit-pill text-center p-5 h-100">
+            <div class="benefit-icon-wrap mx-auto mb-4">
+              <svg
+                width="26"
+                height="26"
+                fill="#fff"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12,0C5.383,0,0,5.383,0,12c.603,15.898,23.4,15.894,24,0,0-6.617-5.383-12-12-12Zm1,17v1c-.005,1.308-1.995,1.307-2,0v-1h-.268c-1.067,0-2.063-.574-2.598-1.499-.277-.479-.113-1.09,.364-1.366,.479-.279,1.091-.113,1.366,.364,.179,.31,.511,.501,.867,.501h2.268c.997,.065,1.443-1.55,.356-1.76l-3.041-.507c-3.502-.649-2.748-5.753,.685-5.733v-1c.006-1.308,1.995-1.307,2,0v1h.268c1.067,0,2.063,.575,2.598,1.5,.277,.478,.113,1.089-.364,1.366-.48,.277-1.091,.113-1.366-.365-.179-.309-.511-.5-.867-.5h-2.268c-.997-.065-1.442,1.55-.356,1.76l3.041,.507c3.502,.649,2.748,5.753-.685,5.733Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="h5 fw-bold mb-3">Reduce Costos de Imprenta</h3>
+            <p class="text-body-secondary mb-0">
+              Una sola tarjeta reemplaza cientos de impresiones. Actualiza los
+              datos de cualquier colaborador de forma remota, sin costo adicional.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-pill text-center p-5 h-100">
+            <div class="benefit-icon-wrap mx-auto mb-4">
+              <svg
+                width="26"
+                height="26"
+                fill="#fff"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22,0c0,0-8.759.017-13.384,4.646C5.761,7.491,5.02,11.088,5.879,14.253l-5.586,5.454,1.414,1.449,5.527-5.396c.879.297,1.788.444,2.695.444,2.898,0,5.784-1.244,7.842-3.607C22.15,7.381,22,0,22,0Zm-5.743,11.571c-1.565,1.826-3.813,2.755-6.073,2.602l7.989-7.802-1.414-1.449-8.046,7.858c-.415-2.253.339-4.634,2.055-6.346C14.026,2.682,19.268,2.059,20.896,2c-.064,1.653-.69,6.933-4.639,11.571Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="h5 fw-bold mb-3">Protege el Medio Ambiente</h3>
+            <p class="text-body-secondary mb-0">
+              Elimina el uso de papel para siempre. Una tarjeta NFC tiene una
+              vida útil de años sin necesidad de reimprimirse.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="benefit-pill text-center p-5 h-100">
+            <div class="benefit-icon-wrap mx-auto mb-4">
+              <svg
+                width="26"
+                height="26"
+                fill="#fff"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13,0L1,14h10l-1,10,13-14h-10L13,0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="h5 fw-bold mb-3">Contacto Instantáneo</h3>
+            <p class="text-body-secondary mb-0">
+              Un solo toque transmite toda tu información directamente a la
+              agenda del cliente. Sin fricción, sin errores de dedo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Nuevo estándar -->
+
+  <!-- ===== APLICACIONES ESTRATÉGICAS ===== -->
+  <section id="aplicaciones" class="aplicaciones-section py-12">
+    <div class="container">
+      <div class="row justify-content-center mb-8">
+        <div class="col-12 col-md-10 col-lg-8 text-center" data-aos="fade-up">
+          <h6 class="text-uppercase purple-eyebrow-text fw-bold mb-3">
+            Casos de Uso
+          </h6>
+          <h2 class="display-5 fw-bold">
+            Aplicaciones Estratégicas para tu Industria
+          </h2>
+        </div>
+      </div>
+
+      <div class="use-cases-grid">
+        <div class="use-case-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="use-case-icon">
+            <span>📇</span>
+          </div>
+          <div class="use-case-content">
+            <h3 class="h5 fw-bold mb-2">V-Card Dinámica Integral</h3>
+            <p class="text-body-secondary mb-0">
+              La tarjeta transfiere el perfil completo del ejecutivo (nombre,
+              puesto, extensiones, correos, foto y sitio web) directamente a los
+              contactos del cliente. Sin errores de dedo ni tarjetas perdidas.
+            </p>
+          </div>
+        </div>
+
+        <div class="use-case-item" data-aos="fade-up" data-aos-delay="50">
+          <div class="use-case-icon">
+            <span>📦</span>
+          </div>
+          <div class="use-case-content">
+            <h3 class="h5 fw-bold mb-2">Catálogos B2B al Instante</h3>
+            <p class="text-body-secondary mb-0">
+              Si tu fuerza de ventas distribuye insumos para restaurantes,
+              productos de limpieza industrial o agroquímicos, un solo toque
+              puede descargar la ficha técnica en PDF o abrir la tienda B2B en
+              el dispositivo del comprador.
+            </p>
+          </div>
+        </div>
+
+        <div class="use-case-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="use-case-icon">
+            <span>🎓</span>
+          </div>
+          <div class="use-case-content">
+            <h3 class="h5 fw-bold mb-2">Reclutamiento y Difusión Institucional</h3>
+            <p class="text-body-secondary mb-0">
+              Excelente herramienta para universidades y escuelas. Los asesores
+              de admisiones pueden transferir folletos de carreras, planes de
+              estudio o formularios de inscripción directamente a los aspirantes
+              durante ferias educativas.
+            </p>
+          </div>
+        </div>
+
+        <div class="use-case-item" data-aos="fade-up" data-aos-delay="150">
+          <div class="use-case-icon">
+            <span>🔄</span>
+          </div>
+          <div class="use-case-content">
+            <h3 class="h5 fw-bold mb-2">Control Centralizado (Bajas y Cambios)</h3>
+            <p class="text-body-secondary mb-0">
+              La tarjeta física pertenece a la empresa. Si un empleado cambia de
+              puesto o de número, o si hay rotación de personal, la información
+              digital se actualiza de manera remota sin necesidad de emitir un
+              plástico nuevo.
+            </p>
+          </div>
+        </div>
+
+        <div class="use-case-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="use-case-icon">
+            <span>📊</span>
+          </div>
+          <div class="use-case-content">
+            <h3 class="h5 fw-bold mb-2">Captación de Leads en Campo</h3>
+            <p class="text-body-secondary mb-0">
+              Enlaza la tarjeta a una landing page del vendedor donde el
+              prospecto pueda dejar su correo o agendar una demostración en el
+              momento justo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Aplicaciones -->
+
+  <!-- ===== DISEÑO Y CONFIGURACIÓN ===== -->
+  <section class="diseno-section py-12 position-relative overflow-hidden">
+    <div class="diseno-bg-gradient"></div>
+    <div class="container position-relative" style="z-index: 1;">
+      <div class="row align-items-center gy-8">
+        <div class="col-12 col-lg-6" data-aos="fade-right">
+          <h6 class="text-uppercase purple-eyebrow-text fw-bold mb-3">
+            Personalización Total
+          </h6>
+          <h2 class="display-5 fw-bold mb-4">
+            Diseño y Configuración a Nivel Empresarial
+          </h2>
+          <p class="text-body-secondary fs-5 mb-5">
+            Entendemos la importancia del branding. Ofrecemos personalización
+            total del PVC rígido para alinear el diseño a la identidad visual de
+            tu marca, logrando un acabado profesional, minimalista y sobrio. Nos
+            encargamos de la codificación y el enrutamiento de datos para cada
+            miembro de tu equipo.
+          </p>
+          <ul class="design-features-list list-unstyled">
+            <li class="design-feature-item">
+              <div class="dfi-check">✓</div>
+              <span>Diseño 100% alineado a tu identidad corporativa</span>
+            </li>
+            <li class="design-feature-item">
+              <div class="dfi-check">✓</div>
+              <span
+                >Codificación y enrutamiento de datos para cada miembro del
+                equipo</span
+              >
+            </li>
+            <li class="design-feature-item">
+              <div class="dfi-check">✓</div>
+              <span>PVC rígido de alta durabilidad</span>
+            </li>
+            <li class="design-feature-item">
+              <div class="dfi-check">✓</div>
+              <span>Actualización remota de información en cualquier momento</span>
+            </li>
+            <li class="design-feature-item">
+              <div class="dfi-check">✓</div>
+              <span
+                >Compatible con todos los smartphones modernos (iOS y Android)</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card variants showcase -->
+        <div
+          class="col-12 col-lg-6 d-flex justify-content-center"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
+          <div class="brand-customization-demo">
+            <p class="demo-label text-body-secondary mb-4 text-center fw-medium">
+              Tu tarjeta, tu identidad
+            </p>
+            <div class="card-variants">
+              <div class="variant-card variant-dark">
+                <div class="variant-nfc-icon">
+                  <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
+                    <path
+                      d="M13 22 Q13 13 20 13 Q27 13 27 22"
+                      stroke="rgba(255,255,255,0.85)"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <path
+                      d="M9 22 Q9 8 20 8 Q31 8 31 22"
+                      stroke="rgba(255,255,255,0.45)"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <circle cx="20" cy="27" r="2.5" fill="rgba(255,255,255,0.85)"
+                    ></circle>
+                  </svg>
+                </div>
+                <span class="variant-name">Ejecutivo</span>
+              </div>
+
+              <div class="variant-card variant-purple">
+                <div class="variant-nfc-icon">
+                  <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
+                    <path
+                      d="M13 22 Q13 13 20 13 Q27 13 27 22"
+                      stroke="rgba(255,255,255,0.85)"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <path
+                      d="M9 22 Q9 8 20 8 Q31 8 31 22"
+                      stroke="rgba(255,255,255,0.45)"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <circle cx="20" cy="27" r="2.5" fill="rgba(255,255,255,0.85)"
+                    ></circle>
+                  </svg>
+                </div>
+                <span class="variant-name">Corporativo</span>
+              </div>
+
+              <div class="variant-card variant-light">
+                <div class="variant-nfc-icon">
+                  <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
+                    <path
+                      d="M13 22 Q13 13 20 13 Q27 13 27 22"
+                      stroke="rgba(80,40,160,0.8)"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <path
+                      d="M9 22 Q9 8 20 8 Q31 8 31 22"
+                      stroke="rgba(80,40,160,0.4)"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      fill="none"></path>
+                    <circle cx="20" cy="27" r="2.5" fill="rgba(80,40,160,0.8)"
+                    ></circle>
+                  </svg>
+                </div>
+                <span class="variant-name variant-name--dark">Minimalista</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Diseño -->
+
+  <!-- ===== PARA QUIÉN ES ===== -->
+  <section class="target-section py-12">
+    <div class="container">
+      <div class="row justify-content-center mb-8">
+        <div
+          class="col-12 col-md-10 col-lg-7 text-center"
+          data-aos="fade-up"
+        >
+          <h6 class="text-uppercase purple-eyebrow-text fw-bold mb-3">
+            ¿Para quién es?
+          </h6>
+          <h2 class="display-5 fw-bold">
+            Ideal para Empresas y Freelancers
+          </h2>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="50">
+          <div class="target-card h-100 p-5">
+            <div class="target-icon mb-4">
+              <svg
+                width="38"
+                height="38"
+                fill="#633fb9"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19,17a5.994,5.994,0,0,1-3-.806A5.994,5.994,0,0,1,13,17H11a5.938,5.938,0,0,1-3-.818A5.936,5.936,0,0,1,5,17H4a5.949,5.949,0,0,1-3-.813V21a3,3,0,0,0,3,3H20a3,3,0,0,0,3-3V16.188A5.958,5.958,0,0,1,20,17Z"
+                ></path>
+                <path
+                  d="M17,0V6H15V0H9V6H7V0H2.2L.024,9.783,0,11a4,4,0,0,0,4,4H5a3.975,3.975,0,0,0,3-1.382A3.975,3.975,0,0,0,11,15h2a3.99,3.99,0,0,0,3-1.357A3.99,3.99,0,0,0,19,15h1a4,4,0,0,0,4-4V10L21.8,0Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="h4 fw-bold mb-3">Empresas</h3>
+            <p class="text-body-secondary mb-4">
+              Estandariza la imagen de todo tu equipo. Controla la información
+              que cada colaborador comparte y actualiza datos en tiempo real
+              desde un panel centralizado.
+            </p>
+            <ul class="target-list list-unstyled">
+              <li>· Fuerzas de ventas</li>
+              <li>· Directivos y ejecutivos</li>
+              <li>· Equipos de reclutamiento</li>
+              <li>· Distribuidores y representantes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="target-card h-100 p-5">
+            <div class="target-icon mb-4">
+              <svg
+                width="38"
+                height="38"
+                fill="#633fb9"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3,6C3,2.691,5.692,0,9,0s6,2.691,6,6-2.691,6-6,6S3,9.309,3,6Zm21,12c0,3.314-2.686,6-6,6s-6-2.686-6-6,2.686-6,6-6,6,2.686,6,6Zm-2.288-1.702c-.383-.399-1.017-.41-1.414-.029l-2.713,2.624c-.143,.141-.379,.144-.522,.002l-1.354-1.331c-.396-.388-1.028-.381-1.414,.014-.387,.395-.381,1.027,.014,1.414l1.354,1.332c.46,.449,1.062,.674,1.663,.674s1.201-.225,1.653-.671l2.703-2.614c.398-.383,.411-1.016,.029-1.414Zm-11.712,1.702c0-1.368,.345-2.655,.95-3.781-.629-.14-1.28-.219-1.95-.219h0C4.044,14,.01,18.028,0,22.983c-.001,.557,.443,1.017,1,1.017H12.721c-1.665-1.466-2.721-3.607-2.721-6Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="h4 fw-bold mb-3">Freelancers</h3>
+            <p class="text-body-secondary mb-4">
+              Impresiona a tus clientes desde el primer momento. Comparte tu
+              portafolio, redes sociales y datos de contacto con un solo toque.
+              Diferénciate de la competencia.
+            </p>
+            <ul class="target-list list-unstyled">
+              <li>· Diseñadores y creativos</li>
+              <li>· Consultores independientes</li>
+              <li>· Fotógrafos y videógrafos</li>
+              <li>· Agentes y asesores</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Para quién es -->
+
+  <!-- ===== FINAL CTA ===== -->
+  <section
+    class="final-cta d-flex justify-content-center align-items-center flex-column w-100 position-relative overflow-hidden"
+    style="min-height: 80vh; z-index: 10;"
+  >
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <h2 class="display-4 fw-bold mb-3" data-aos="fade-up">
+        Lleva tu <span class="text-labs-gradient">Networking</span><br />
+        al Siguiente Nivel
+      </h2>
+      <p
+        class="text-body-secondary fs-5 mb-6"
+        data-aos="fade-up"
+        data-aos-delay="80"
+      >
+        Contáctanos hoy y recibe una propuesta personalizada para tu empresa.
+      </p>
+      <CustomBtn
+        isPrimary={true}
+        extraClasses="hero-btn-font-fix px-5 py-3"
+        href="https://wa.me/526681057964?text=Hola%20LabStudio%2C%20me%20interesan%20las%20Tarjetas%20NFC%20para%20mi%20empresa!"
+        blank={true}
+        aos="fade-up"
+      >
+        Cotiza tus Tarjetas NFC
+      </CustomBtn>
+    </div>
+
+    <div class="position-absolute hsg-3" data-aos="fade-in" data-aos-duration="600">
+      <div class="radial-purple-nfc" style="width: 28rem; height: 28rem;"></div>
+    </div>
+    <div class="position-absolute hsg-4" data-aos="fade-in" data-aos-duration="600">
+      <div class="radial-purple-nfc" style="width: 24rem; height: 24rem;"></div>
+    </div>
+  </section>
+  <!-- /Final CTA -->
+
+  <div class="position-relative" style="z-index: 11;">
+    <Footer useMap={false} />
+  </div>
+
+  <WhatsApp />
+
+  <style>
+    /* ===== HERO ===== */
+    .hero-nfc {
+      min-height: calc(100vh - 111px);
+      padding: 5rem 1.5rem;
+      overflow: hidden;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-nfc-title {
+      font-size: 3.4rem;
+      line-height: 1.15;
+    }
+
+    .hero-nfc-sub {
+      font-size: 1.15rem;
+      max-width: 520px;
+    }
+
+    .nfc-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+    }
+
+    .hero-stats {
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding-top: 1.5rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      color: #633fb9;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      margin-top: 0.3rem;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 3rem;
+      background: rgba(0, 0, 0, 0.1);
+      align-self: center;
+    }
+
+    /* Orbs */
+    .radial-purple-nfc {
+      background: radial-gradient(
+        circle,
+        rgba(92, 33, 240, 0.65) 0%,
+        rgba(93, 32, 235, 0.38) 18%,
+        rgba(99, 27, 207, 0) 68%
+      );
+      border-radius: 50%;
+      filter: blur(22px);
+      opacity: 0.8;
+    }
+
+    .hsg-1 {
+      left: -12rem;
+      top: 0;
+      z-index: 0;
+    }
+
+    .hsg-2 {
+      right: -10rem;
+      bottom: 6rem;
+      z-index: 0;
+    }
+
+    .hsg-3 {
+      left: -14rem;
+      top: 4rem;
+      z-index: 0;
+    }
+
+    .hsg-4 {
+      right: -10rem;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    /* ===== NFC CARD SHOWCASE ===== */
+    .nfc-card-showcase {
+      position: relative;
+      width: 340px;
+      height: 370px;
+    }
+
+    .card-stack {
+      position: relative;
+      width: 300px;
+    }
+
+    .biz-card {
+      width: 300px;
+      height: 172px;
+      border-radius: 16px;
+      position: absolute;
+    }
+
+    .biz-card--back {
+      background: linear-gradient(135deg, #2d0f6a 0%, #1a0845 100%);
+      transform: rotate(-8deg) translateY(32px) translateX(-12px);
+      top: 0;
+      opacity: 0.45;
+      box-shadow: 0 20px 60px rgba(99, 63, 185, 0.28);
+    }
+
+    .biz-card--mid {
+      background: linear-gradient(135deg, #4a2896 0%, #301874 100%);
+      transform: rotate(-4deg) translateY(16px) translateX(-6px);
+      top: 0;
+      opacity: 0.7;
+      box-shadow: 0 20px 60px rgba(99, 63, 185, 0.28);
+    }
+
+    .biz-card--front {
+      background: linear-gradient(135deg, #7c52d5 0%, #5030b0 50%, #3a1a88 100%);
+      top: 0;
+      box-shadow: 0 30px 80px rgba(99, 63, 185, 0.45);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .biz-card--front::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.07) 0%,
+        transparent 70%
+      );
+      pointer-events: none;
+    }
+
+    .card-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      position: absolute;
+      top: 1.2rem;
+      left: 1.4rem;
+    }
+
+    .card-logo-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.75);
+    }
+
+    .card-logo-text {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    .nfc-symbol-container {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+    }
+
+    .nfc-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .card-info {
+      z-index: 1;
+    }
+
+    .card-name {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .card-title-text {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.78rem;
+    }
+
+    .tap-ripple {
+      position: absolute;
+      bottom: 2.2rem;
+      right: 2.8rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.22);
+      animation: ripple 2.8s ease-out infinite;
+      pointer-events: none;
+    }
+
+    .tap-ripple--2 {
+      animation-delay: 1.4s;
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(2.6);
+        opacity: 0;
+      }
+    }
+
+    /* Phone mockup */
+    .phone-mockup {
+      position: absolute;
+      bottom: -10px;
+      right: -20px;
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 0.75rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+      width: 176px;
+    }
+
+    .phone-screen {
+      background: #fff;
+      border-radius: 10px;
+      padding: 0.75rem;
+    }
+
+    .contact-received {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .contact-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c52d5, #4e2fa8);
+      flex-shrink: 0;
+    }
+
+    .contact-name-mock {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .contact-added-text {
+      font-size: 0.6rem;
+      color: #39b54a;
+      margin-top: 0.1rem;
+    }
+
+    /* ===== NUEVO ESTÁNDAR ===== */
+    .nuevo-estandar {
+      background-color: #fafafa;
+    }
+
+    .benefit-pill {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid rgba(99, 63, 185, 0.1);
+      box-shadow: 0 4px 24px rgba(99, 63, 185, 0.06);
+      transition:
+        transform 0.22s,
+        box-shadow 0.22s;
+    }
+
+    .benefit-pill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px rgba(99, 63, 185, 0.13);
+    }
+
+    .benefit-icon-wrap {
+      width: 62px;
+      height: 62px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #7c52d5, #4e2fa8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ===== APLICACIONES ===== */
+    .aplicaciones-section {
+      background: #fff;
+    }
+
+    .use-cases-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .use-case-item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 1.75rem 2rem;
+      background: #fafafa;
+      border-radius: 16px;
+      border: 1px solid rgba(99, 63, 185, 0.08);
+      transition:
+        border-color 0.22s,
+        box-shadow 0.22s;
+    }
+
+    .use-case-item:hover {
+      border-color: rgba(99, 63, 185, 0.22);
+      box-shadow: 0 6px 30px rgba(99, 63, 185, 0.07);
+    }
+
+    .use-case-icon {
+      font-size: 1.9rem;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 13px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .use-case-content {
+      flex: 1;
+    }
+
+    /* ===== DISEÑO SECTION ===== */
+    .diseno-section {
+      background: linear-gradient(160deg, #f8f5ff 0%, #fafafa 55%, #fff 100%);
+    }
+
+    .diseno-bg-gradient {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        ellipse at 85% 50%,
+        rgba(99, 63, 185, 0.055) 0%,
+        transparent 68%
+      );
+      pointer-events: none;
+    }
+
+    .design-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .design-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .dfi-check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c52d5, #4e2fa8);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Card variants */
+    .brand-customization-demo {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .demo-label {
+      font-size: 0.875rem;
+    }
+
+    .card-variants {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .variant-card {
+      width: 100%;
+      height: 110px;
+      border-radius: 14px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.13);
+      transition: transform 0.2s;
+    }
+
+    .variant-card:hover {
+      transform: translateX(5px);
+    }
+
+    .variant-dark {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2d1b6e 100%);
+    }
+
+    .variant-purple {
+      background: linear-gradient(135deg, #633fb9 0%, #4e2fa8 100%);
+    }
+
+    .variant-light {
+      background: linear-gradient(135deg, #ede8ff 0%, #e0d6ff 100%);
+      border: 1px solid rgba(99, 63, 185, 0.15);
+    }
+
+    .variant-name {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .variant-name--dark {
+      color: rgba(60, 30, 120, 0.75);
+    }
+
+    /* ===== TARGET SECTION ===== */
+    .target-section {
+      background: #fafafa;
+    }
+
+    .target-card {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid rgba(99, 63, 185, 0.1);
+      box-shadow: 0 4px 24px rgba(99, 63, 185, 0.06);
+      transition:
+        transform 0.22s,
+        box-shadow 0.22s;
+    }
+
+    .target-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px rgba(99, 63, 185, 0.13);
+    }
+
+    .target-list {
+      color: #633fb9;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media only screen and (max-width: 992px) {
+      .hero-nfc-title {
+        font-size: 2.8rem;
+      }
+      .hero-nfc-sub {
+        max-width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .hero-nfc-title {
+        font-size: 2.3rem;
+      }
+      .nfc-card-showcase {
+        width: 280px;
+        height: 310px;
+      }
+      .biz-card {
+        width: 250px;
+        height: 144px;
+      }
+      .phone-mockup {
+        width: 150px;
+        right: -10px;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      .hero-nfc {
+        padding: 3.5rem 1rem;
+      }
+      .hero-nfc-title {
+        font-size: 2rem;
+      }
+      .stat-divider {
+        height: 2rem;
+      }
+      .stat-number {
+        font-size: 1.6rem;
+      }
+      .use-case-item {
+        flex-direction: column;
+        gap: 0.9rem;
+        padding: 1.25rem;
+      }
+      .card-variants {
+        gap: 0.75rem;
+      }
+      .variant-card {
+        height: 96px;
+      }
+      .hsg-1 {
+        left: -16rem;
+      }
+      .hsg-2 {
+        right: -14rem;
+      }
+    }
+
+    @media only screen and (max-width: 420px) {
+      .hero-nfc-title {
+        font-size: 1.8rem;
+      }
+      .nfc-card-showcase {
+        width: 240px;
+      }
+      .biz-card {
+        width: 215px;
+        height: 126px;
+      }
+    }
+  </style>
+</SubPageLayout>
