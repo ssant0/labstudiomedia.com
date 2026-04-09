@@ -1,5 +1,6 @@
 ---
 import Gtm from '../components/shared/Gtm.astro';
+import GtmBody from '../components/shared/GtmBody.astro';
 import Maps from '../components/shared/Maps.astro';
 
 interface Props {
@@ -53,6 +54,7 @@ const { title, ogTitle, description, ogDescription, keywords } = Astro.props;
     <link rel="stylesheet" href="/styles/shared.css" />
   </head>
   <body>
+    <GtmBody />
     <slot />
   </body>
   <script is:inline src="/js/theme.bundle.js"></script>
