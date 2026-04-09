@@ -142,8 +142,8 @@ Auditoría generada el 2026-04-08. Score inicial: **42 / 100**
 - [ ] Reducir a 2-3 pesos de fuente (Regular, Bold, opcional Medium)
 
 ### 14. Optimizar carga de JS
-- [ ] Auditar `public/js/vendor.bundle.js` (726 KB) — agregar `defer` o dividir scripts debajo del fold
-- [ ] Revisar si `theme.bundle.js` puede cargarse con `defer` también
+- [x] Auditar `public/js/vendor.bundle.js` (726 KB) — agregar `defer` a ambos scripts
+- [x] Revisar si `theme.bundle.js` puede cargarse con `defer` también
 
 ### 15. Arreglar alt text de imágenes en blog
 - [ ] `src/components/blog/BlogEntry.astro:39` — reemplazar `alt="linea"` con texto descriptivo dinámico basado en el título del post o contenido

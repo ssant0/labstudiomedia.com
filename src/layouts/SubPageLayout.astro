@@ -57,6 +57,6 @@ const { title, ogTitle, description, ogDescription, keywords } = Astro.props;
     <GtmBody />
     <slot />
   </body>
-  <script is:inline src="/js/theme.bundle.js"></script>
-  <script is:inline src="/js/vendor.bundle.js"></script>
+  <script is:inline src="/js/theme.bundle.js" defer></script>
+  <script is:inline src="/js/vendor.bundle.js" defer></script>
 </html>
