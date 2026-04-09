@@ -2,6 +2,7 @@
 // components
 import IndexLayout from "../layouts/IndexLayout.astro";
 import Nav from "../components/shared/Nav.astro";
+import { Image } from "astro:assets";
 import Footer from "../components/shared/Footer.astro";
 import WhatsApp from "../components/shared/WhatsApp.astro";
 import Card from "../components/index/PricingCard.astro";
@@ -41,11 +42,13 @@ import CustomBtn from "../components/shared/CustomBtn.astro";
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="intro-image-container col-12 col-md-5 col-lg-5 order-md-2">
-						<img
+						<Image
 							id="welcome-image"
-							src={IntroImage.src}
+							src={IntroImage}
 							alt="Ilustracion de introducción en la portada"
 							class="img-introduction img-fluid mb-2 mb-md-0"
+							loading="eager"
+							fetchpriority="high"
 						/>
 					</div>
 					<div class="col-12 col-md-7 col-lg-7 order-md-1">
@@ -87,7 +90,7 @@ import CustomBtn from "../components/shared/CustomBtn.astro";
 						<div class="col-12 col-md-4 services-intro" data-aos="fade-up" data-aos-duration="600">
 							<div class="service-card">
 								<div class="icon-container mb-3">
-									<img src={WebDev.src} alt="Ilustración sobre una pagina web"/>
+									<Image src={WebDev} alt="Ilustración sobre una pagina web" />
 								</div>
 								<p class="card-intro-title text-dark-labs-gradient">
 									Desarrollo Web
@@ -101,7 +104,7 @@ import CustomBtn from "../components/shared/CustomBtn.astro";
 						<div class="col-12 col-md-4 services-intro" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
 							<di class="service-card">
 								<div class="icon-container mb-3">
-									<img src={Branding.src} alt="Ilustración sobre diseño"/>
+									<Image src={Branding} alt="Ilustración sobre diseño" />
 								</div>
 								<p class="card-intro-title text-dark-labs-gradient"> Branding </p>
 								<p class="text-muted mb-0">
@@ -112,7 +115,7 @@ import CustomBtn from "../components/shared/CustomBtn.astro";
 						<div class="col-12 col-md-4 services-intro" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
 							<div class="service-card">
 								<div class="icon-container mb-3">
-									<img src={OnlineStore.src} alt="Ilustración de un cohete" style="width: 75px;"/>
+									<Image src={OnlineStore} alt="Ilustración de un cohete" width={75} />
 								</div>
 								<p class="card-intro-title text-dark-labs-gradient">
 									Tienda en linea

@@ -1,11 +1,4 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 User-agent: *
 Allow: /
-Allow: /fotografia
-Allow: /blog
-Disallow: /desarrollo-web
-Disallow: /produccion-de-video
 
-Sitemap: https://www.labstudiomedia.com/sitemap.xml
+Sitemap: https://labstudiomedia.com/sitemap.xml

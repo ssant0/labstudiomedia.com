@@ -3,7 +3,7 @@ import Footer from "../shared/Footer.astro";
 import Nav from "../shared/Nav.astro";
 import type BlogContent from "../../interfaces/BlogContentList";
 import SubPageLayout from "../../layouts/SubPageLayout.astro";
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
 interface Props {
@@ -19,7 +19,46 @@ interface Props {
   content: BlogContent[];
 }
 
-const { title, ogTitle, description, ogDescription, keywords,createdBy, skill, date, blogImage, content } = Astro.props;
+const { title, ogTitle, description, ogDescription, keywords, createdBy, skill, date, blogImage, content } = Astro.props;
+
+const meses: Record<string, string> = {
+  enero: '01', febrero: '02', marzo: '03', abril: '04',
+  mayo: '05', junio: '06', julio: '07', agosto: '08',
+  septiembre: '09', octubre: '10', noviembre: '11', diciembre: '12',
+};
+
+function toISODate(spanishDate: string): string {
+  const parts = spanishDate.replace(',', '').split(' ');
+  const mes = meses[parts[0].toLowerCase()] ?? '01';
+  const dia = parts[1].padStart(2, '0');
+  const año = parts[2];
+  return `${año}-${mes}-${dia}`;
+}
+
+const pageUrl = `https://labstudiomedia.com${Astro.url.pathname}`;
+const isoDate = toISODate(date);
+const optimizedImage = blogImage ? await getImage({ src: blogImage }) : null;
+const imageUrl = optimizedImage
+  ? `https://labstudiomedia.com${optimizedImage.src}`
+  : 'https://labstudiomedia.com/pageView.webp';
+
+const blogPostingSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  url: pageUrl,
+  datePublished: isoDate,
+  inLanguage: 'es-MX',
+  image: imageUrl,
+  author: {
+    '@type': 'Person',
+    name: createdBy,
+  },
+  publisher: {
+    '@id': 'https://labstudiomedia.com/#organization',
+  },
+});
 
 ---
 
@@ -30,6 +69,7 @@ const { title, ogTitle, description, ogDescription, keywords,createdBy, skill, d
   ogDescription={ ogDescription }
   keywords={ keywords }
 >
+  <script type="application/ld+json" slot="head" set:html={blogPostingSchema} />
   <Nav />
 
   <main class="w-100 d-flex flex-column justify-content-center align-items-center pb-11">
@@ -37,8 +77,10 @@ const { title, ogTitle, description, ogDescription, keywords,createdBy, skill, d
       <h1 class="m-0">{ title }</h1>
       <p class="text-gray-700 ms-1">Por <span>{ createdBy }</span> - <span>{ skill }</span> en <span class="lab-font-color">LABSTUDIO</span> • <span>{ date }</span></p>
 
-      <Image src={blogImage} alt="linea" class="w-100 h-auto shadow rounded mt-4 mb-6" />
-    
+      {
+        blogImage && (<Image src={blogImage} alt="linea" class="w-100 h-auto shadow rounded mt-4 mb-6" />)
+      }
+
       <div class="w-100 d-flex align-items-center flex-column pt-6">
 
         {

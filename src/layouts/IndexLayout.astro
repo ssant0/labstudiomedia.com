@@ -23,14 +23,14 @@ const { title, ogTitle, description, ogDescription, keywords } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index" />
     <title>{title}</title>
-    <link rel="canonical" href="https://labstudiomedia.com" />
+    <link rel="canonical" href={`https://labstudiomedia.com${Astro.url.pathname}`} />
     <meta
       name="google-site-verification"
       content="O5K-700LvgkrdOo5Ir4cyfOGDaastTK5-TNAC-4utPo"
     />
-    <meta name="og:title" content={ogTitle} />
+    <meta property="og:title" content={ogTitle} />
     <meta name="description" content={description} />
-    <meta name="og:description" content={ogDescription} />
+    <meta property="og:description" content={ogDescription} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="LabStudioMedia" />
     <meta name="og:author" content="LabStudioMedia" />
@@ -39,7 +39,7 @@ const { title, ogTitle, description, ogDescription, keywords } = Astro.props;
     <meta
       property="og:image"
       itemprop="image primaryImageOfPage"
-      content="/pageView.webp"
+      content="https://labstudiomedia.com/pageView.webp"
     />
     <meta property="og:url" content="https://labstudiomedia.com/" />
     <link rel="shortcut icon" type="icon" href="/favicon/favicon.ico" />
@@ -48,7 +48,50 @@ const { title, ogTitle, description, ogDescription, keywords } = Astro.props;
     <link rel="icon" href="/favicon/96x96.png" sizes="96x96">
     <link rel="icon" href="/favicon/144x144.png" sizes="144x144">
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://labstudiomedia.com/#organization",
+      "name": "LabStudio Media",
+      "url": "https://labstudiomedia.com",
+      "logo": "https://labstudiomedia.com/favicon/144x144.png",
+      "image": "https://labstudiomedia.com/pageView.webp",
+      "description": "Agencia de marketing digital en Los Mochis, Sinaloa. Servicios de marketing digital, producción de video, fotografía, desarrollo web y tarjetas NFC para negocios en todo México.",
+      "telephone": "+526681057964",
+      "email": "contacto@labstudiomedia.com",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Los Mochis, Sinaloa, México"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "México"
+      },
+      "sameAs": [
+        "https://www.instagram.com/labstudiomedia/",
+        "https://www.facebook.com/labstudiomedia/",
+        "https://www.tiktok.com/@labstudiomedia",
+        "https://www.linkedin.com/company/labstudiomedia/",
+        "https://www.youtube.com/@labstudiomedia"
+      ],
+      "inLanguage": "es-MX"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://labstudiomedia.com/#website",
+      "url": "https://labstudiomedia.com",
+      "name": "LABSTUDIO | Marketing Digital",
+      "description": "Agencia de marketing digital, desarrollo web y tarjetas NFC en Los Mochis, Sinaloa.",
+      "inLanguage": "es-MX",
+      "publisher": {
+        "@id": "https://labstudiomedia.com/#organization"
+      }
+    }
+    </script>
     <link rel="stylesheet" href="/styles/theme.bundle.css" />
     <link rel="stylesheet" href="/styles/libs.bundle.css" />
     <link rel="stylesheet" href="/styles/shared.css" />
