@@ -4,6 +4,47 @@ import Footer from "../components/shared/Footer.astro";
 import Nav from "../components/shared/Nav.astro";
 import WhatsApp from "../components/shared/WhatsApp.astro";
 import CustomBtn from "../components/shared/CustomBtn.astro";
+
+const faqItems = [
+  {
+    q: "¿Cuánto cuestan las tarjetas NFC?",
+    a: "El precio varía según la cantidad de tarjetas, el diseño y las opciones de personalización. Contáctanos por WhatsApp para recibir una cotización personalizada sin compromiso.",
+  },
+  {
+    q: "¿Cuánto tiempo tarda la entrega?",
+    a: "El proceso completo de diseño, producción y entrega toma entre 7 y 10 días hábiles a partir de la aprobación del diseño final.",
+  },
+  {
+    q: "¿Hacen envíos a todo México?",
+    a: "Sí, realizamos envíos a cualquier ciudad de México. Los costos y tiempos de envío varían según la ciudad de destino.",
+  },
+  {
+    q: "¿Las tarjetas NFC funcionan con cualquier teléfono?",
+    a: "Sí. Las tarjetas son compatibles con todos los smartphones modernos que cuenten con NFC, tanto iOS (iPhone 7 en adelante) como Android (la mayoría de modelos desde 2016). No requieren app adicional.",
+  },
+  {
+    q: "¿Cuántas tarjetas es el mínimo de pedido?",
+    a: "Contamos con pedidos desde una sola unidad, ideal para freelancers. También manejamos lotes corporativos para equipos completos. Contáctanos para conocer el precio según la cantidad.",
+  },
+  {
+    q: "¿Puedo actualizar mi información sin cambiar la tarjeta física?",
+    a: "Sí. La información digital está vinculada a un perfil en línea. Si cambias de puesto, número de teléfono o cualquier dato, se actualiza de forma remota sin necesidad de fabricar una nueva tarjeta.",
+  },
+  {
+    q: "¿Qué tipo de información puede incluir la tarjeta?",
+    a: "Prácticamente cualquier cosa: nombre, puesto, empresa, teléfonos, correo electrónico, redes sociales, sitio web, portafolio, catálogo en PDF o un formulario de contacto. Todo lo que sea una URL puede ser enlazado a tu tarjeta.",
+  },
+];
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a },
+  })),
+});
 ---
 
 <SubPageLayout
@@ -13,6 +54,7 @@ import CustomBtn from "../components/shared/CustomBtn.astro";
   ogDescription="Moderniza la presentación de tu equipo con tarjetas NFC. Diseño corporativo, control centralizado y tecnología de vanguardia. LabStudio Media, Los Mochis."
   keywords="tarjetas NFC, tarjetas de presentación NFC, tarjetas inteligentes empresariales, NFC México, tarjetas contactless, vCard NFC, tarjetas digitales, presentación empresarial, NFC Los Mochis, Sinaloa, tarjetas PVC NFC, tarjetas corporativas, networking digital"
 >
+  <script type="application/ld+json" slot="head" set:html={schemaJson} />
   <Nav />
 
   <!-- ===== HERO ===== -->
@@ -566,6 +608,49 @@ import CustomBtn from "../components/shared/CustomBtn.astro";
   </section>
   <!-- /Para quién es -->
 
+  <!-- ===== FAQ ===== -->
+  <section class="py-12">
+    <div class="container">
+      <div class="row justify-content-center mb-8">
+        <div class="col-12 col-md-10 col-lg-8 text-center" data-aos="fade-up">
+          <h6 class="text-uppercase purple-eyebrow-text fw-bold mb-3">Preguntas Frecuentes</h6>
+          <h2 class="display-5 fw-bold">Todo lo que necesitas saber</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-delay="50">
+          <div class="accordion faq-accordion" id="faqNfcAccordion">
+            {faqItems.map((item, i) => (
+              <div class="accordion-item faq-item">
+                <h3 class="accordion-header">
+                  <button
+                    class={`accordion-button faq-btn${i !== 0 ? " collapsed" : ""}`}
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#faqNfc${i}`}
+                    aria-expanded={i === 0 ? "true" : "false"}
+                  >
+                    {item.q}
+                  </button>
+                </h3>
+                <div
+                  id={`faqNfc${i}`}
+                  class={`accordion-collapse collapse${i === 0 ? " show" : ""}`}
+                  data-bs-parent="#faqNfcAccordion"
+                >
+                  <div class="accordion-body text-body-secondary">
+                    {item.a}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /FAQ -->
+
   <!-- ===== FINAL CTA ===== -->
   <section
     class="final-cta d-flex justify-content-center align-items-center flex-column w-100 position-relative overflow-hidden"
@@ -610,6 +695,37 @@ import CustomBtn from "../components/shared/CustomBtn.astro";
   <WhatsApp />
 
   <style>
+    /* ===== FAQ ===== */
+    .faq-item {
+      border: 1px solid rgba(99, 63, 185, 0.15);
+      border-radius: 0.75rem !important;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .faq-btn {
+      font-weight: 600;
+      color: #1a1a2e;
+      background-color: #fff;
+      box-shadow: none;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .faq-btn:not(.collapsed) {
+      color: #633fb9;
+      background-color: #f5f0ff;
+      box-shadow: none;
+    }
+    .faq-btn::after {
+      filter: invert(28%) sepia(60%) saturate(800%) hue-rotate(240deg);
+    }
+    .faq-btn:not(.collapsed)::after {
+      filter: invert(28%) sepia(60%) saturate(800%) hue-rotate(240deg);
+    }
+    .accordion-body {
+      background-color: #f5f0ff;
+      padding-top: 0;
+    }
+
     /* ===== HERO ===== */
     .hero-nfc {
       min-height: calc(100vh - 111px);

@@ -6,6 +6,47 @@ import WhatsApp from "../components/shared/WhatsApp.astro";
 import CustomBtn from "../components/shared/CustomBtn.astro";
 import PricingCard from "../components/index/PricingCard.astro";
 import CheckIconGreen from "../components/shared/CheckIconGreen.astro";
+
+const faqItems = [
+  {
+    q: "¿Cuánto tiempo tarda en estar lista mi página web?",
+    a: "Depende del paquete. Un sitio informativo (Básico o Landing) generalmente está listo en 2 a 3 semanas. El paquete Deluxe o una tienda en línea puede tomar entre 3 y 5 semanas, según los requerimientos de diseño y contenido.",
+  },
+  {
+    q: "¿Necesito saber de tecnología para tener un sitio web?",
+    a: "No. Nosotros nos encargamos de todo el proceso: diseño, programación, configuración del dominio y hosting. Solo necesitas compartir la información de tu negocio y nosotros hacemos el resto.",
+  },
+  {
+    q: "¿Mi página web va a funcionar bien en celular?",
+    a: "Sí. Todos nuestros sitios son 100% responsivos, es decir, se adaptan automáticamente a cualquier pantalla: celular, tablet o computadora. Además los optimizamos para que carguen rápido en dispositivos móviles.",
+  },
+  {
+    q: "¿Qué pasa cuando termina el año de dominio y hosting gratuitos?",
+    a: "Al vencer el primer año, te ofrecemos un plan de renovación a precio accesible para que tu sitio siga en línea sin interrupciones. Te avisamos con anticipación para que no haya sorpresas.",
+  },
+  {
+    q: "¿Mi sitio web va a aparecer en Google?",
+    a: "Todos nuestros sitios incluyen configuración básica de SEO (metadatos, velocidad de carga, diseño responsivo). Los paquetes Landing y Deluxe incluyen optimización SEO más avanzada para mejorar tu posicionamiento en buscadores en Los Mochis y toda México.",
+  },
+  {
+    q: "¿Puedo actualizar el contenido de mi sitio después de la entrega?",
+    a: "Sí. Según el paquete que contrates tienes acceso a soporte básico, avanzado o premium para solicitar actualizaciones de contenido, imágenes y textos.",
+  },
+  {
+    q: "¿Hacen tiendas en línea?",
+    a: "Sí. Contamos con el paquete 'Mi Tienda en Línea' que incluye diseño personalizado, dominio, hosting, certificado SSL, optimización SEO y avisos automáticos a clientes por correo electrónico. Ideal para vender tus productos en todo México.",
+  },
+];
+
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a },
+  })),
+});
 ---
 
 <SubPageLayout
@@ -15,6 +56,7 @@ import CheckIconGreen from "../components/shared/CheckIconGreen.astro";
   ogDescription="Impulsa tu negocio en línea con nuestro expertise en desarrollo web. Soluciones personalizadas para sitios web y aplicaciones web."
   keywords="Desarrollo web, Agencia web, Creación sitios web, Aplicaciones web, Desarrollo web México, Desarrollo web Los Mochis, Sinaloa, Diseño web, Programación web, Soluciones web, Sitios web personalizados, Aplicaciones web dinámicas, Desarrollo de software, Tecnologías web, Desarrollo de sitios web, Creación de sitios web, Agencia de desarrollo web, Servicios de desarrollo web, Desarrollo web profesional, Soluciones web innovadoras, Angular, Typescript, Astro, Go, Nodejs, Sitios web corporativos, Sitios web para empresas, Desarrollo web empresarial, Soluciones web para pequeñas empresas, Desarrollo web para medianas empresas"
 >
+  <script type="application/ld+json" slot="head" set:html={schemaJson} />
   <Nav />
 
   <!-- Hero section -->
@@ -405,6 +447,49 @@ import CheckIconGreen from "../components/shared/CheckIconGreen.astro";
   </section>
   <!-- Pricing cards stores -->
 
+  <!-- FAQ -->
+  <section class="py-12">
+    <div class="container">
+      <div class="row justify-content-center mb-8">
+        <div class="col-12 col-md-10 col-lg-8 text-center" data-aos="fade-up">
+          <h6 class="text-uppercase purple-eyebrow-text fw-bold mb-3">Preguntas Frecuentes</h6>
+          <h2 class="display-5 fw-bold">Todo lo que necesitas saber</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-delay="50">
+          <div class="accordion faq-accordion" id="faqWebAccordion">
+            {faqItems.map((item, i) => (
+              <div class="accordion-item faq-item">
+                <h3 class="accordion-header">
+                  <button
+                    class={`accordion-button faq-btn${i !== 0 ? " collapsed" : ""}`}
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#faqWeb${i}`}
+                    aria-expanded={i === 0 ? "true" : "false"}
+                  >
+                    {item.q}
+                  </button>
+                </h3>
+                <div
+                  id={`faqWeb${i}`}
+                  class={`accordion-collapse collapse${i === 0 ? " show" : ""}`}
+                  data-bs-parent="#faqWebAccordion"
+                >
+                  <div class="accordion-body text-body-secondary">
+                    {item.a}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /FAQ -->
+
   <!-- Final CTA -->
   <section
     class="d-flex justify-content-center align-items-center flex-column w-100 position-relative"
@@ -457,6 +542,36 @@ import CheckIconGreen from "../components/shared/CheckIconGreen.astro";
   <!-- WhatsApp component -->
 
   <style>
+    .faq-item {
+      border: 1px solid rgba(99, 63, 185, 0.15);
+      border-radius: 0.75rem !important;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .faq-btn {
+      font-weight: 600;
+      color: #1a1a2e;
+      background-color: #fff;
+      box-shadow: none;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .faq-btn:not(.collapsed) {
+      color: #633fb9;
+      background-color: #f5f0ff;
+      box-shadow: none;
+    }
+    .faq-btn::after {
+      filter: invert(28%) sepia(60%) saturate(800%) hue-rotate(240deg);
+    }
+    .faq-btn:not(.collapsed)::after {
+      filter: invert(28%) sepia(60%) saturate(800%) hue-rotate(240deg);
+    }
+    .accordion-body {
+      background-color: #f5f0ff;
+      padding-top: 0;
+    }
+
     .hero-content {
       width: 100%;
       padding: 0 2rem;

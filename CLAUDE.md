@@ -2,7 +2,9 @@
 
 ## Project overview
 
-Marketing agency website for LabStudio Media (Los Mochis, Sinaloa). Built with Astro v6, static output, content in Spanish. Services: marketing digital, tarjetas NFC, desarrollo web.
+Digital solutions agency website for LabStudio Media (Los Mochis, Sinaloa). Built with Astro v6, static output, content in Spanish. Services: soluciones digitales, desarrollo web, tarjetas NFC, branding, tiendas en línea, Google My Business, WhatsApp Business.
+
+**Brand positioning (updated 2026-04):** The agency no longer positions itself as a "marketing digital" agency and does NOT offer photography or video production services. The term "marketing digital" has been replaced throughout by "Soluciones Digitales". Blog posts about photo/video/drones remain published but these are historical content — do not add new references to photo/video as agency services in main pages (index, layouts, tarjetas-nfc, desarrollo-web).
 
 ## Commands
 

@@ -107,7 +107,6 @@ Auditoría generada el 2026-04-08. Score inicial: **42 / 100**
 - [ ] Nueva ruta: `src/pages/sobre-nosotros.astro`
 - [ ] Contenido mínimo: historia de la agencia, nombres y roles del equipo, años en operación, ciudad/estado en el cuerpo del texto (no solo en meta)
 - [ ] Agregar al Nav y Footer
-- [ ] Agregar al sitemap
 
 ### 9. Crear página `/aviso-de-privacidad`
 - [x] Nueva ruta: `src/pages/aviso-de-privacidad.astro`
@@ -132,9 +131,9 @@ Auditoría generada el 2026-04-08. Score inicial: **42 / 100**
 - [ ] Agregar al menos un resultado real de cliente (puede ser anónimo)
 
 ### 12. Agregar secciones FAQ en páginas de servicio
-- [ ] `src/pages/desarrollo-web.astro` — 5 a 7 preguntas frecuentes
-- [ ] `src/pages/tarjetas-nfc.astro` — 5 a 7 preguntas frecuentes (incluir precio, tiempo de entrega, cobertura)
-- [ ] Agregar schema `FAQPage` JSON-LD en cada página
+- [x] `src/pages/desarrollo-web.astro` — 7 preguntas frecuentes
+- [x] `src/pages/tarjetas-nfc.astro` — 7 preguntas frecuentes (precio, entrega, envíos, compatibilidad, mínimo, actualización, contenido)
+- [x] Agregar schema `FAQPage` JSON-LD en cada página
 
 ### 13. Arreglar performance de fuentes
 - [ ] `public/styles/theme.bundle.css` — agregar `font-display: swap` en la declaración `@font-face`
