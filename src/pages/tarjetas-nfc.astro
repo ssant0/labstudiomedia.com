@@ -4,6 +4,16 @@ import Footer from "../components/shared/Footer.astro";
 import Nav from "../components/shared/Nav.astro";
 import WhatsApp from "../components/shared/WhatsApp.astro";
 import CustomBtn from "../components/shared/CustomBtn.astro";
+import { Image } from "astro:assets";
+import card1 from "../img/labstudio/brand/card-1.png";
+import card2 from "../img/labstudio/brand/card-2.png";
+import card3 from "../img/labstudio/brand/card-3.png";
+import cardKlyn from "../img/nfc-cards/klyn.png";
+import cardTalamasa from "../img/nfc-cards/talamasa.png";
+import cardCucii from "../img/nfc-cards/cucii.png";
+import cardReimax from "../img/nfc-cards/reimax.png";
+import cardHolidayInn from "../img/nfc-cards/holiidayinn.png";
+import cardCybercafe from "../img/nfc-cards/cybercafe10m.png";
 
 const faqItems = [
   {
@@ -450,7 +460,11 @@ const schemaJson = JSON.stringify({
               Tu tarjeta, tu identidad
             </p>
             <div class="card-variants">
+
               <div class="variant-card variant-dark">
+                <div class="card-center">
+                  <Image src={card1} alt="LabStudio Media logo color" class="variant-logo" width={120} height={120} />
+                </div>
                 <div class="variant-nfc-icon">
                   <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
                     <path
@@ -469,10 +483,13 @@ const schemaJson = JSON.stringify({
                     ></circle>
                   </svg>
                 </div>
-                <span class="variant-name">Ejecutivo</span>
+                <span class="variant-name">Manuel Samaniego</span>
               </div>
 
               <div class="variant-card variant-purple">
+                <div class="card-center">
+                  <Image src={card2} alt="LabStudio Media logo color" class="variant-logo" width={120} height={120} />
+                </div>
                 <div class="variant-nfc-icon">
                   <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
                     <path
@@ -491,10 +508,13 @@ const schemaJson = JSON.stringify({
                     ></circle>
                   </svg>
                 </div>
-                <span class="variant-name">Corporativo</span>
+                <span class="variant-name">Manuel Samaniego</span>
               </div>
 
               <div class="variant-card variant-light">
+                <div class="card-center">
+                  <Image src={card3} alt="LabStudio Media logo color" class="variant-logo" width={120} height={120} />
+                </div>
                 <div class="variant-nfc-icon">
                   <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
                     <path
@@ -513,7 +533,7 @@ const schemaJson = JSON.stringify({
                     ></circle>
                   </svg>
                 </div>
-                <span class="variant-name variant-name--dark">Minimalista</span>
+                <span class="variant-name variant-name--dark">Manuel Samaniego</span>
               </div>
             </div>
           </div>
@@ -522,6 +542,101 @@ const schemaJson = JSON.stringify({
     </div>
   </section>
   <!-- /Diseño -->
+
+  <!-- ===== CLIENTES ===== -->
+  <section class="clients-gallery-section py-12">
+    <div class="container">
+      <div class="row justify-content-center mb-8">
+        <div class="col-12 col-md-10 col-lg-8 text-center" data-aos="fade-up">
+          <h6 class="text-uppercase purple-eyebrow-text fw-bold mb-3">
+            Casos Reales
+          </h6>
+          <h2 class="display-5 fw-bold mb-3">
+            Empresas que ya usan Tarjetas NFC
+          </h2>
+          <p class="text-body-secondary fs-5 mb-0">
+            Diseños únicos para cada marca, perfectamente alineados a su
+            identidad corporativa.
+          </p>
+        </div>
+      </div>
+
+      <div class="nfc-clients-grid">
+        <div class="nfc-client-card-wrap" data-aos="fade-up" data-aos-delay="0">
+          <div class="nfc-client-card">
+            <Image
+              src={cardKlyn}
+              alt="Tarjeta NFC Klyn — empresa de limpieza"
+              class="nfc-client-img"
+              width={468}
+              height={295}
+            />
+          </div>
+        </div>
+
+        <div class="nfc-client-card-wrap" data-aos="fade-up" data-aos-delay="60">
+          <div class="nfc-client-card">
+            <Image
+              src={cardTalamasa}
+              alt="Tarjeta NFC Talamasa — tabiques y ladrillos"
+              class="nfc-client-img"
+              width={468}
+              height={295}
+            />
+          </div>
+        </div>
+
+        <div class="nfc-client-card-wrap" data-aos="fade-up" data-aos-delay="120">
+          <div class="nfc-client-card">
+            <Image
+              src={cardCucii}
+              alt="Tarjeta NFC Centro Universitario de Ciencias e Investigación"
+              class="nfc-client-img"
+              width={468}
+              height={295}
+            />
+          </div>
+        </div>
+
+        <div class="nfc-client-card-wrap" data-aos="fade-up" data-aos-delay="60">
+          <div class="nfc-client-card">
+            <Image
+              src={cardReimax}
+              alt="Tarjeta NFC RE/MAX — asesor inmobiliario"
+              class="nfc-client-img"
+              width={468}
+              height={295}
+            />
+          </div>
+        </div>
+
+        <div class="nfc-client-card-wrap" data-aos="fade-up" data-aos-delay="120">
+          <div class="nfc-client-card">
+            <Image
+              src={cardHolidayInn}
+              alt="Tarjeta NFC Holiday Inn Resort Mazatlán"
+              class="nfc-client-img"
+              width={468}
+              height={295}
+            />
+          </div>
+        </div>
+
+        <div class="nfc-client-card-wrap" data-aos="fade-up" data-aos-delay="180">
+          <div class="nfc-client-card">
+            <Image
+              src={cardCybercafe}
+              alt="Tarjeta NFC Cybercafe 10 de Mayo"
+              class="nfc-client-img"
+              width={468}
+              height={295}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Clientes -->
 
   <!-- ===== PARA QUIÉN ES ===== -->
   <section class="target-section py-12">
@@ -821,6 +936,17 @@ const schemaJson = JSON.stringify({
       position: relative;
       width: 516px;
       height: 552px;
+    }
+
+    .card-center {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .card-stack {
@@ -1141,6 +1267,7 @@ const schemaJson = JSON.stringify({
       width: 100%;
       aspect-ratio: 85.6 / 54;
       border-radius: 14px;
+      position: relative;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -1167,6 +1294,9 @@ const schemaJson = JSON.stringify({
     }
 
     .variant-name {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 1rem;
       color: rgba(255, 255, 255, 0.75);
       font-size: 0.72rem;
       font-weight: 600;
@@ -1276,6 +1406,64 @@ const schemaJson = JSON.stringify({
       .biz-card {
         width: 288px;
         height: 166px;
+      }
+    }
+
+    /* ===== CLIENTS GALLERY ===== */
+    .clients-gallery-section {
+      background: #fafafa;
+    }
+
+    .nfc-clients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .nfc-client-card-wrap {
+      /* AOS wrapper — no styles needed */
+    }
+
+    .nfc-client-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        0 12px 32px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 85.6 / 54;
+      transition:
+        transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .nfc-client-card:hover {
+      transform: translateY(-10px) scale(1.025);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1),
+        0 24px 56px rgba(99, 63, 185, 0.2);
+    }
+
+    .nfc-client-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media only screen and (max-width: 992px) {
+      .nfc-clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      .nfc-clients-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 420px;
+        margin: 0 auto;
       }
     }
   </style>
